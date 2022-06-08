@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
 
+import Buscador from "./Buscador";
+
 function Header(){
     return(
         <header>
@@ -16,7 +18,8 @@ function Header(){
                       <Link to="/Contacto"className="navbar-brand" style={{color:"white"}}>Contacto</Link>  
                     </li>
                 </ul>
-                </div>
+                <Buscador />
+              </div>
             </nav>
         </header>
     )

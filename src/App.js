@@ -6,6 +6,7 @@ import Listado from "./Components/Listado"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
 import Detail from "./Components/Detail"
+import Results from "./Components/Results"
 //Styles
 import "./Css/bootstrap.min.css";
 
@@ -19,6 +20,7 @@ function App() {
       <Route exact path ="/" element={<Login />} />
       <Route path ="/listado" element={<Listado />} />
       <Route path ="/detail" element={<Detail />} />
+      <Route path ="/results" element={<Results />} />
       
     </Routes>
     </div>
