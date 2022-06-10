@@ -1,14 +1,15 @@
 
-function AddorRemove(e){
+// console.log(tempMovieInFavs);
 
+
+const  AddorRemove =e=>{
     const favMovies = localStorage.getItem('favs');
-let tempMovieInFavs;
-if(favMovies === null){
-  tempMovieInFavs = [];
-} else{
-  tempMovieInFavs = JSON.parse(favMovies)
-}
-console.log(tempMovieInFavs);
+    let tempMovieInFavs;
+    if(favMovies === null){
+      tempMovieInFavs = [];
+    } else{
+      tempMovieInFavs = JSON.parse(favMovies)
+    }
 
     const btn = e.currentTarget;
     const parent = btn.parentElement;
@@ -26,13 +27,16 @@ console.log(tempMovieInFavs);
         tempMovieInFavs.push(movieData);
         localStorage.setItem('favs', JSON.stringify(tempMovieInFavs));
         console.log("Film added")
-    } else{
+    } else {
        let moviesLeft = tempMovieInFavs.filter(oneMovie =>{
            return oneMovie.id !== movieData.id
        }) 
+      
        localStorage.setItem('favs', JSON.stringify(moviesLeft))
        console.log("Film deleted")
+       window.location.reload()
     }
+    
     
     
 }

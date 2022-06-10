@@ -12,10 +12,10 @@ function Header(){
                       <Link to="/" className="navbar-brand" style={{color:"white"}}> Home</Link> 
                     </li>
                     <li className="nav-item">
-                      <Link to="/Listado" className="navbar-brand" style={{color:"white"}}>Listado</Link>  
+                      <Link to="/Listado" className="navbar-brand" style={{color:"white"}}>All movies</Link>  
                     </li>
                     <li className="nav-item">
-                      <Link to="/Contacto"className="navbar-brand" style={{color:"white"}}>Contacto</Link>  
+                      <Link to="/favorites"className="navbar-brand" style={{color:"white"}}>Favorites</Link>  
                     </li>
                 </ul>
                 <Buscador />

@@ -7,6 +7,7 @@ import Header from "./Components/Header"
 import Footer from "./Components/Footer"
 import Detail from "./Components/Detail"
 import Results from "./Components/Results"
+import Favorites from "./Components/Favorites"
 //Styles
 import "./Css/bootstrap.min.css";
 
@@ -23,7 +24,7 @@ function App() {
       <Route path ="/listado" element={ <Listado/>} />
       <Route path ="/detail" element={<Detail />} />
       <Route path ="/results" element={<Results />} />
-      
+      <Route path ="/favorites" element={<Favorites />} />
     </Routes>
     </div>
     <Footer />
