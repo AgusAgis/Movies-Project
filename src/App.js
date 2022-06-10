@@ -10,11 +10,9 @@ import Results from "./Components/Results"
 //Styles
 import "./Css/bootstrap.min.css";
 
-function App() {
-  const addOrRemoveFromFavs =()=>{
-    console.log("ok, funcionó")
-  }
 
+
+function App() {
   return (
     <>
     <Header />
@@ -22,7 +20,7 @@ function App() {
     <Routes>
       
       <Route exact path ="/" element={<Login />} />
-      <Route path ="/listado" element={<Listado/>} />
+      <Route path ="/listado" element={ <Listado/>} />
       <Route path ="/detail" element={<Detail />} />
       <Route path ="/results" element={<Results />} />
       
