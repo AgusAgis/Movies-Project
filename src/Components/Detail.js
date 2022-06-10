@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Navigate} from 'react-router-dom';
 import axios from 'axios';
+
 function Detail(){
     let token =  sessionStorage.getItem("token");
 
@@ -16,13 +17,14 @@ function Detail(){
         setMovie(movieData);
     }) 
     .catch(error =>{
-        console.log("There has been an error")
+        console.log(error,"There has been an error")
     })
     }, [movieID])
 
     return(
         <>
         { !token && <Navigate to="/"/>}
+        {!movie && <p>Loading ...</p>}
         { movie && 
        <>
         <h2>Title:  {movie.title}</h2>
