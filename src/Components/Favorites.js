@@ -31,7 +31,7 @@ let token = sessionStorage.getItem("token");
     className="favourite-btn"
     onClick={AddorRemove}
     data-movie-id={oneMovie.id}
-    >🖤</button>
+    >⭐</button>
     <div className="card-body">
     <h5 className="card-title">{oneMovie.title}</h5>
     <p className="card-text">{oneMovie.overview.substring(0,100)}...</p>

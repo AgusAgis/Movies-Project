@@ -43,9 +43,10 @@ function Listado(props){
         <button 
         className="favourite-btn"
         onClick={AddorRemove}
-        data-movie-id={oneMovie.id}
-        >🖤</button>
-        <div className="card-body">
+        data-movie-id={oneMovie.id} 
+        > ⭐ </button>
+        
+       <div className="card-body">
         <h5 className="card-title">{oneMovie.title.substring(0,20)}</h5>
         <p className="card-text">{oneMovie.overview.substring(0,100)}...</p>
         <Link to={`/detail?movieID=${oneMovie.id}`} className="btn btn-primary">View detail</Link>
