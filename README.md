@@ -24,21 +24,21 @@ Contraseña: react
 
 - Landing Page
 
-![landingPage](../alkemychallenge/img/landing.jpeg)
+![landingPage](/img/landing.jpeg)
 
 
 - Home
 
-![home](../alkemychallenge/img/home.jpeg)
+![home](/img/home.jpeg)
 
 
 - Review
 
-![review](../alkemychallenge/img/review.jpeg)
+![review](/img/review.jpeg)
 
 - Favorites section
 
-![favs](../alkemychallenge/img/favs.jpeg)
+![favs](/img/favs.jpeg)
 
 
 
