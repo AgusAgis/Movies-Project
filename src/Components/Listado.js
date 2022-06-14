@@ -27,12 +27,13 @@ function Listado(props){
         })
     },[setMoviesList])
    
+    // style={{backgroundColor:"black"}}
 
     return(
         <>
         { !token && <Navigate to="/"/>}
 
-        <div className='row'>
+        <div className='row' style={{backgroundColor:"black"}} >
 
         {moviesList.map((oneMovie,idx)=> {
         return(
@@ -45,7 +46,7 @@ function Listado(props){
         data-movie-id={oneMovie.id}
         >🖤</button>
         <div className="card-body">
-        <h5 className="card-title">{oneMovie.title}</h5>
+        <h5 className="card-title">{oneMovie.title.substring(0,20)}</h5>
         <p className="card-text">{oneMovie.overview.substring(0,100)}...</p>
         <Link to={`/detail?movieID=${oneMovie.id}`} className="btn btn-primary">View detail</Link>
   </div>

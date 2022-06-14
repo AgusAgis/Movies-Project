@@ -1,6 +1,4 @@
-
-// console.log(tempMovieInFavs);
-
+import swAlert from "@sweetalert/with-react"
 
 const  AddorRemove =e=>{
     const favMovies = localStorage.getItem('favs');
@@ -26,18 +24,29 @@ const  AddorRemove =e=>{
     if(!movieIsInArray){
         tempMovieInFavs.push(movieData);
         localStorage.setItem('favs', JSON.stringify(tempMovieInFavs));
-        console.log("Film added")
+        swAlert({
+            title: "Movie added to favorites",
+            icon: "success",
+          });
     } else {
        let moviesLeft = tempMovieInFavs.filter(oneMovie =>{
            return oneMovie.id !== movieData.id
        }) 
       
        localStorage.setItem('favs', JSON.stringify(moviesLeft))
-       console.log("Film deleted")
-       window.location.reload()
+       swAlert({
+        title: "Movie deleted from favorites",
+        text:"The movie has been removed from the section",
+        icon: "error",
+        button:false,
+        
+      }); 
+      
+      console.log("Film deleted")
+      setTimeout(window.location.reload.bind(window.location), 2000);
+   
     }
-    
-    
+
     
 }
 export default AddorRemove;
