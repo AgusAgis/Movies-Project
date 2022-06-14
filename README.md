@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+## MoviesWebSite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Proyecto individual realizado para presentar en AlkemyChallenge. Un sitio web consume una API “The Movie DataBase (TMDB)” para traerse información de las peliculas. El usuario deberá primeramente loguearse correctamente para acceder al Home y luego la plataforma utiliza la información de la API en diferentes componentes. El flujo de la información esta encriptado por Token de acceso para que de no estar logueado no podrá acceder, ni interactuar con ninguna sección de la misma.En otras funcionalidades el usuario también puede buscar peliculas por nombre, ver las reseñas de las mismas, añadir peliculas a la sección "Favorites" o eliminarlas de allí.
 
-In the project directory, you can run:
+Tecnologias utilizadas:
+<br>
+Front-End: React, CSS y HTML
+ También cuenta con la integración de: SweetAlert, Bootstrap, y  Hooks de React.
+## Para Probar el proyecto
+Online: 
 
-### `npm start`
+Local: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Despues de clonar el repositorio.
+- Volver al proyecto y en la terminal realizar los siguientes pasos:
+- En la primer terminal ejecutar el comando: `cd alkemychallenge` y ejecutar el comando: `npm install` para instalar las dependencias y ejecutar el comando: `npm start` para iniciar el servidor.
+-Alli deberá completar el login con los siguientes datos 
+CorreoElectronico : challenge@alkemy.org
+Contraseña: react
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Imagenes
 
-### `npm test`
+- Landing Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![landingPage](../alkemychallenge/img/landing.jpeg)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Home
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![home](../alkemychallenge/img/home.jpeg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+- Review
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![review](../alkemychallenge/img/review.jpeg)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Favorites section
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![favs](../alkemychallenge/img/favs.jpeg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
