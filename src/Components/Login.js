@@ -38,10 +38,10 @@ function Login() {
      
             return
         }
-        
+        const url = "http://challenge-react.alkemy.org"
         
         axios
-        .post("http://challenge-react.alkemy.org",{email, password})
+        .post( url,{email, password})
         .then(res => {
             swAlert({
                 title: "¡Perfecto!",
