@@ -8,14 +8,33 @@ import AddorRemove from './AddorRemove';
 
 function Listado(props){
 
+    function paginado(e,number){
+        e.preventDefault()
+        setNumberPage(number) 
+        console.log(number,"hola")
+       }
+       function paginadoNext(e){
+        e.preventDefault()   
+        if(numberpage +1 < 500){
+        setNumberPage(numberpage + 1) 
+        }
+       
+       }
+       function paginadoPrev(e){
+        e.preventDefault()
+        if(numberpage -1 >0){
+            setNumberPage(numberpage - 1) 
+        }
+       }
     
     let token = sessionStorage.getItem("token");
     console.log(props);
     
     const [moviesList, setMoviesList] = useState([])
+    const [numberpage, setNumberPage] =  useState(1)
 
     useEffect(()=>{
-        const endPoint = " https://api.themoviedb.org/3/discover/movie?api_key=59a57bf993e9ba97bc1ed47880ea2f0a&language=en-US&page=1"
+        const endPoint = `https://api.themoviedb.org/3/discover/movie?api_key=59a57bf993e9ba97bc1ed47880ea2f0a&language=en-US&page=${numberpage}`
         axios.get(endPoint)
         .then(response =>{
             const apiData =response.data;
@@ -25,10 +44,8 @@ function Listado(props){
             swAlert(<h2>There has been a problem, 
             <br></br>try later</h2>)
         })
-    },[setMoviesList])
+    },[numberpage])
    
-    // style={{backgroundColor:"black"}}
-
     return(
         <>
         { !token && <Navigate to="/"/>}
@@ -57,6 +74,21 @@ function Listado(props){
 })
 }
 </div>
+<nav aria-label="Page navigation example  ">
+  <ul className="pagination justify-content-center">
+    <li  className="page-item">
+      <a onClick={(e) => paginadoPrev(e)} className="page-link bg-dark">Previous</a>
+    </li>
+    <li className="page-item "><a  onClick={(e) => paginado(e,1)} className="page-link bg-dark" href="#">{numberpage}</a></li>
+    <li className="page-item"><a  onClick={(e) => paginado(e,2)} className="page-link bg-dark" href="#">{numberpage+1}</a></li>
+    <li className="page-item"><a  onClick={(e) => paginado(e,3)} className="page-link bg-dark" href="#">{numberpage+2}</a></li>
+    <li className="page-item"><a  onClick={(e) => paginado(e,4)} className="page-link bg-dark" href="#">{numberpage+3}</a></li>
+    <li className="page-item"><a  onClick={(e) => paginado(e,5)} className="page-link bg-dark" href="#">{numberpage+4}</a></li>
+    <li className="page-item">
+      <a onClick={(e) => paginadoNext(e)}className="page-link bg-dark" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 </>
 )
 }
